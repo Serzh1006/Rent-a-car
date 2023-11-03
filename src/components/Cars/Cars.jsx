@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectItems } from '../../redux/selectors';
 import CarsItem from '../CarsItem/CarsItem';
 
-const Cars = () => {
+const Cars = ({ showModal, cardID }) => {
   const items = useSelector(selectItems);
 
   return (
@@ -12,6 +12,7 @@ const Cars = () => {
           return (
             <CarsItem
               key={obj.id}
+              id={obj.id}
               img={obj.img}
               description={obj.description}
               make={obj.make}
@@ -23,6 +24,8 @@ const Cars = () => {
               type={obj.type}
               mileage={obj.mileage}
               functionalities={obj.functionalities}
+              showModal={showModal}
+              cardID={cardID}
             />
           );
         })}

@@ -12,9 +12,12 @@ const CarsItem = ({
   type,
   mileage,
   functionalities,
+  showModal,
+  id,
+  cardID,
 }) => {
   return (
-    <li>
+    <li id={id}>
       <div>
         <img src={img} alt={description} width="274px" />
       </div>
@@ -32,7 +35,15 @@ const CarsItem = ({
           {address}|{rentalCompany}|{type}|{model}|{mileage}|{functionalities}
         </p>
       </div>
-      <button type="button">Learn More</button>
+      <button
+        type="button"
+        onClick={e => {
+          cardID(e.currentTarget.parentNode.id);
+          showModal(true);
+        }}
+      >
+        Learn More
+      </button>
     </li>
   );
 };
@@ -50,5 +61,6 @@ CarsItem.propTypes = {
   rentalCompany: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   mileage: PropTypes.number.isRequired,
-  functionalities: PropTypes.array.isRequired,
+  functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  showModal: PropTypes.func.isRequired,
 };
