@@ -5,18 +5,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--background-backdrop);
   top: 0;
   left: 0;
 }
 
 .modal {
-  width: 400px;
-  height: 250px;
-  background-color: #9eb6e7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 541px;
+  height: auto;
+  background-color: var(--text-color);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.boxImg {
+  width: 461px;
+  height: 248px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  border-radius: 14px;
   overflow: hidden;
-  border-radius: 10px;
+  background-color: var(--back-modal-img);
+}
+
+.infoModal,
+.infoModalSecond {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-info-color);
+}
+
+.infoModalSecond {
+  margin-bottom: 14px;
+}
+
+.description {
+  color: var(--text-primary-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin-bottom: 24px;
+}
+
+.titleFuctions {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-primary-color);
+  line-height: 1.42;
 }

@@ -11,6 +11,7 @@
 }
 
 .cardImgWrapper {
+  position: relative;
   width: 274px;
   height: 268px;
   border-radius: 14px;
@@ -75,4 +76,12 @@
 
 .model {
   color: var(--btn-color);
+}
+
+.btnFavorite {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background-color: transparent;
 }

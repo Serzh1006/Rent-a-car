@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import AppBar from '../AppBar/AppBar';
 import css from './layout.module.css';
 
@@ -8,7 +9,9 @@ const Layout = () => {
       <AppBar />
       <main>
         <div className={css.container}>
-          <Outlet />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>
         </div>
       </main>
     </>

@@ -47,4 +47,6 @@ img {
   --text-primary-color: #121417;
   --btn-color: #3470ff;
   --btn-color-hover: #0b44cd;
+  --background-backdrop: rgba(18, 20, 23, 0.5);
+  --back-modal-img: #f3f3f2;
 }
