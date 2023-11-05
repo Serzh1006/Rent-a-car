@@ -39,7 +39,7 @@ const CarsItem = ({
             <p className={css.markaCar}>
               {`${make} `}
               <span className={css.model}>
-                {model.length < 7 ? model : ''},
+                {model.length <= 7 ? model : ''},
               </span>
               <span className={css.yearCar}>{year}</span>
             </p>
