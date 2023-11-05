@@ -1,13 +1,14 @@
 import { useSelector } from 'react-redux';
 import { selectItems } from '../../redux/selectors';
 import CarsItem from '../CarsItem/CarsItem';
+import css from './cars.module.css';
 
 const Cars = ({ showModal, cardID }) => {
   const items = useSelector(selectItems);
 
   return (
     <>
-      <ul>
+      <ul className={css.cardList}>
         {items.map(obj => {
           return (
             <CarsItem
@@ -23,6 +24,7 @@ const Cars = ({ showModal, cardID }) => {
               rentalCompany={obj.rentalCompany}
               type={obj.type}
               mileage={obj.mileage}
+              accessories={obj.accessories}
               functionalities={obj.functionalities}
               showModal={showModal}
               cardID={cardID}

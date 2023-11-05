@@ -1,0 +1,73 @@
+.cardItem {
+  width: 274px;
+  height: auto;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.cardImgWrapper {
+  width: 274px;
+  height: 268px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 2.5%,
+    rgba(18, 20, 23, 0) 41.07%
+  );
+}
+
+.cardName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.markaCar,
+.priceCar {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.infoCar,
+.infoCarSecond {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-info-color);
+}
+
+.infoCarSecond {
+  margin-bottom: 28px;
+}
+
+.learMoreBtn {
+  display: block;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--btn-color);
+  border: none;
+  color: var(--text-color);
+  transform-origin: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.18, 0.69, 0.97, 0.63);
+}
+
+.learMoreBtn:hover,
+.learMoreBtn:focus {
+  background-color: var(--btn-color-hover);
+}

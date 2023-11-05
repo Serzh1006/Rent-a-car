@@ -1,12 +1,13 @@
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import Cars from '../components/Cars/Cars';
-import Modal from '../components/Modal/Modal';
-import { selectItems, selectCount } from '../redux/selectors';
-import { fetchCars } from '../services/fetchCarsAPI';
-import { fetchNextPage } from '../services/fetchMoreAPI';
-import { getDataLength } from '../services/getDataLength';
+import Cars from '../../components/Cars/Cars';
+import Modal from '../../components/Modal/Modal';
+import { selectItems, selectCount } from '../../redux/selectors';
+import { fetchCars } from '../../services/fetchCarsAPI';
+import { fetchNextPage } from '../../services/fetchMoreAPI';
+import { getDataLength } from '../../services/getDataLength';
+import css from './catalog.module.css';
 
 const Catalog = () => {
   let [page, setPage] = useState(1);
@@ -31,7 +32,7 @@ const Catalog = () => {
   }, [dispatch, page]);
 
   return (
-    <div>
+    <>
       {showModal &&
         createPortal(
           <Modal showModal={setShowModal} value={idCard} items={items} />,
@@ -42,13 +43,14 @@ const Catalog = () => {
       )}
       {items.length !== countData && (
         <button
+          className={css.btnLoadMore}
           type="button"
           onClick={() => setPage(prevState => prevState + 1)}
         >
           Load More
         </button>
       )}
-    </div>
+    </>
   );
 };
 

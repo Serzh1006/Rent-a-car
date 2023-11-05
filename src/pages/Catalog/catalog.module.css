@@ -1,0 +1,11 @@
+.btnLoadMore {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration-line: underline;
+  color: var(--btn-color);
+}
