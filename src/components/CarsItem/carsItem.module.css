@@ -31,6 +31,7 @@
 .priceCar {
   font-weight: 500;
   line-height: 1.5;
+  color: var(--text-primary-color);
 }
 
 .infoCar,
@@ -70,4 +71,8 @@
 .learMoreBtn:hover,
 .learMoreBtn:focus {
   background-color: var(--btn-color-hover);
+}
+
+.model {
+  color: var(--btn-color);
 }

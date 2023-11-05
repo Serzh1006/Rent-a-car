@@ -44,6 +44,7 @@ img {
 :root {
   --text-info-color: rgba(18, 20, 23, 0.5);
   --text-color: #fff;
+  --text-primary-color: #121417;
   --btn-color: #3470ff;
   --btn-color-hover: #0b44cd;
 }
