@@ -64,7 +64,7 @@
   background-color: var(--btn-color);
   border: none;
   color: var(--text-color);
-  transform-origin: background-color;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.18, 0.69, 0.97, 0.63);
 }
@@ -84,4 +84,5 @@
   right: 14px;
   border: none;
   background-color: transparent;
+  border-radius: 50%;
 }

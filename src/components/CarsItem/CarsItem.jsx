@@ -34,7 +34,7 @@ const CarsItem = ({
     <li id={id} className={css.cardItem}>
       <div className={css.cardContainer}>
         <div className={css.cardImgWrapper}>
-          <img src={img} alt={description} width="401px" />
+          <img loading="lazy" src={img} alt={description} width="401px" />
           <button
             onClick={() => setFavorite(!isFavotire)}
             className={css.btnFavorite}

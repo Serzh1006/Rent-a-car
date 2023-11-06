@@ -11,11 +11,28 @@
 }
 
 .modal {
+  position: relative;
   width: 541px;
-  height: auto;
+  height: 100vh;
   background-color: var(--text-color);
-  padding: 40px;
   border-radius: 24px;
+  overflow-y: auto;
+}
+
+.containerModal {
+  width: 461px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 0 40px 0;
+}
+
+.btnCloseModal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
 }
 
 .boxImg {
@@ -59,4 +76,27 @@
   margin-bottom: 8px;
   color: var(--text-primary-color);
   line-height: 1.42;
+}
+
+.conditions {
+  margin-bottom: 24px;
+}
+
+.rentalLink {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 50px;
+  text-decoration: none;
+  line-height: 1.42;
+  color: var(--text-color);
+  background-color: var(--btn-color);
+}
+
+.marka {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-primary-color);
 }
