@@ -92,6 +92,13 @@
   line-height: 1.42;
   color: var(--text-color);
   background-color: var(--btn-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.rentalLink:hover,
+.rentalLink:focus {
+  background-color: var(--btn-color-hover);
 }
 
 .marka {
