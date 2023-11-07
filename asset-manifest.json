@@ -1,21 +1,23 @@
 {
   "files": {
     "main.css": "/Rent-a-car/static/css/main.472034ab.css",
-    "main.js": "/Rent-a-car/static/js/main.f3dc2b91.js",
-    "static/js/544.0d0aa127.chunk.js": "/Rent-a-car/static/js/544.0d0aa127.chunk.js",
-    "static/css/578.d7db18eb.chunk.css": "/Rent-a-car/static/css/578.d7db18eb.chunk.css",
-    "static/js/578.06e4fddd.chunk.js": "/Rent-a-car/static/js/578.06e4fddd.chunk.js",
-    "static/js/793.51fc79ea.chunk.js": "/Rent-a-car/static/js/793.51fc79ea.chunk.js",
+    "main.js": "/Rent-a-car/static/js/main.966d6052.js",
+    "static/js/544.100c7dd1.chunk.js": "/Rent-a-car/static/js/544.100c7dd1.chunk.js",
+    "static/css/578.34c04172.chunk.css": "/Rent-a-car/static/css/578.34c04172.chunk.css",
+    "static/js/578.a1fc1f0e.chunk.js": "/Rent-a-car/static/js/578.a1fc1f0e.chunk.js",
+    "static/js/793.5e234639.chunk.js": "/Rent-a-car/static/js/793.5e234639.chunk.js",
+    "static/js/969.24b7124f.chunk.js": "/Rent-a-car/static/js/969.24b7124f.chunk.js",
     "index.html": "/Rent-a-car/index.html",
     "main.472034ab.css.map": "/Rent-a-car/static/css/main.472034ab.css.map",
-    "main.f3dc2b91.js.map": "/Rent-a-car/static/js/main.f3dc2b91.js.map",
-    "544.0d0aa127.chunk.js.map": "/Rent-a-car/static/js/544.0d0aa127.chunk.js.map",
-    "578.d7db18eb.chunk.css.map": "/Rent-a-car/static/css/578.d7db18eb.chunk.css.map",
-    "578.06e4fddd.chunk.js.map": "/Rent-a-car/static/js/578.06e4fddd.chunk.js.map",
-    "793.51fc79ea.chunk.js.map": "/Rent-a-car/static/js/793.51fc79ea.chunk.js.map"
+    "main.966d6052.js.map": "/Rent-a-car/static/js/main.966d6052.js.map",
+    "544.100c7dd1.chunk.js.map": "/Rent-a-car/static/js/544.100c7dd1.chunk.js.map",
+    "578.34c04172.chunk.css.map": "/Rent-a-car/static/css/578.34c04172.chunk.css.map",
+    "578.a1fc1f0e.chunk.js.map": "/Rent-a-car/static/js/578.a1fc1f0e.chunk.js.map",
+    "793.5e234639.chunk.js.map": "/Rent-a-car/static/js/793.5e234639.chunk.js.map",
+    "969.24b7124f.chunk.js.map": "/Rent-a-car/static/js/969.24b7124f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.472034ab.css",
-    "static/js/main.f3dc2b91.js"
+    "static/js/main.966d6052.js"
   ]
 }
