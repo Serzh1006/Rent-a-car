@@ -22,7 +22,7 @@
     "rentalPrice": "$40",
     "rentalCompany": "Luxury Car Rentals",
     "address": "123 Example Street, Kiev, Ukraine",
-    "rentalConditions": "Minimum age: 25'\n'Valid driver's license'\n'Security deposit required",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
     "mileage": 5858
   },
   {
@@ -48,7 +48,7 @@
     "rentalPrice": "$50",
     "rentalCompany": "Premium Auto Rentals",
     "address": "456 Example Avenue, Lviv, Ukraine",
-    "rentalConditions": "Minimum age: 21'\n'Valid driver's license'\n'Proof of insurance required",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nProof of insurance required",
     "mileage": 5352
   },
   {

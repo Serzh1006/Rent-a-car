@@ -17,7 +17,6 @@ const favoriteSlice = createSlice({
       const findIndexCar = state.favorites.findIndex(
         obj => obj.id === action.payload
       );
-      console.log('index', findIndexCar);
       state.favorites.splice(findIndexCar, 1);
     },
   },

@@ -1,31 +1,35 @@
+import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectItems, selectFavorites } from '../../redux/selectors';
 import { addFavCard, removeFavCard } from '../../redux/favoriteSlice';
+import Modal from '../Modal/Modal';
 import css from './carsItem.module.css';
 
-const CarsItem = ({
-  img,
-  description,
-  make,
-  model,
-  year,
-  rentalPrice,
-  address,
-  rentalCompany,
-  type,
-  mileage,
-  accessories,
-  functionalities,
-  showModal,
-  id,
-  cardID,
-}) => {
+const CarsItem = ({ objCar }) => {
   const [isFavorite, setFavorite] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const dispatch = useDispatch();
   const items = useSelector(selectItems);
   const favItems = useSelector(selectFavorites);
+
+  const {
+    img,
+    description,
+    make,
+    model,
+    year,
+    rentalPrice,
+    address,
+    rentalCompany,
+    type,
+    mileage,
+    accessories,
+    functionalities,
+    id,
+  } = objCar;
 
   useEffect(() => {
     const isAddedToCollections = favItems.find(car => car.id === id);
@@ -45,22 +49,24 @@ const CarsItem = ({
   const country = createArray.slice(-1).join('');
 
   const addToFavorites = idCard => {
-    console.log('id car: ', idCard);
     if (!isFavorite) {
       const oneCar = items.find(obj => obj.id === idCard);
       setFavorite(true);
-      console.log('add one Car', oneCar);
       dispatch(addFavCard(oneCar));
     }
     if (isFavorite) {
       setFavorite(false);
-      console.log('delete car', idCard);
       dispatch(removeFavCard(idCard));
     }
   };
 
   return (
     <li id={id} className={css.cardItem}>
+      {showModal &&
+        createPortal(
+          <Modal showModal={setShowModal} item={objCar} />,
+          document.querySelector('#root')
+        )}
       <div className={css.cardContainer}>
         <div className={css.cardImgWrapper}>
           <img src={img} alt={description} width="401px" />
@@ -160,9 +166,8 @@ const CarsItem = ({
       <button
         className={css.learMoreBtn}
         type="button"
-        onClick={e => {
-          cardID(e.currentTarget.parentNode.id);
-          showModal(true);
+        onClick={() => {
+          setShowModal(true);
         }}
       >
         Learn More
@@ -174,17 +179,19 @@ const CarsItem = ({
 export default CarsItem;
 
 CarsItem.propTypes = {
-  img: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  make: PropTypes.string.isRequired,
-  model: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  rentalPrice: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  rentalCompany: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  mileage: PropTypes.number.isRequired,
-  accessories: PropTypes.arrayOf(PropTypes.string).isRequired,
-  functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
-  showModal: PropTypes.func.isRequired,
+  objCar: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    rentalPrice: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+    rentalCompany: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    mileage: PropTypes.number.isRequired,
+    accessories: PropTypes.arrayOf(PropTypes.string).isRequired,
+    functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
+  }),
 };

@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import css from './modal.module.css';
 import cssCar from '../CarsItem/carsItem.module.css';
 
-const Modal = ({ showModal, value, items }) => {
-  const car = items.find(item => item.id === Number(value));
+const Modal = ({ showModal, item }) => {
   const {
+    img,
     make,
     model,
     address,
@@ -13,15 +14,30 @@ const Modal = ({ showModal, value, items }) => {
     type,
     fuelConsumption,
     engineSize,
+    description,
     accessories,
     functionalities,
     rentalConditions,
-    description,
-  } = car;
+    rentalPrice,
+    mileage,
+  } = item;
 
   const createArray = address.split(' ').slice(-2);
   const city = createArray.slice(0, 1).join('').replace(',', ' ').trim();
   const country = createArray.slice(-1).join('');
+  const formattedConditions = rentalConditions
+    .replace('\n', ' ')
+    .replace('\n', ' ')
+    .split(' ');
+
+  let deposit = '';
+  const license = formattedConditions.slice(3, 6);
+
+  const isInclude = formattedConditions.includes('license');
+  if (isInclude) {
+    const getIndex = formattedConditions.indexOf('license');
+    deposit = formattedConditions.slice(getIndex + 1);
+  }
 
   const closeModal = e => {
     if (e.target.id === 'backdrop') {
@@ -79,7 +95,7 @@ const Modal = ({ showModal, value, items }) => {
           </button>
 
           <div className={css.boxImg}>
-            <img src={car.img} alt={description} width="469px" />
+            <img src={img} alt={description} width="469px" />
           </div>
           <div>
             <p className={css.marka}>
@@ -150,11 +166,31 @@ const Modal = ({ showModal, value, items }) => {
           <h2 className={css.titleFuctions}>
             Accessories and functionalities:
           </h2>
-          <p className={css.infoModal}>
-            {[...accessories, ...functionalities]}
+          <p className={css.accessoriesText}>
+            {[...accessories, ...functionalities].join(' | ')}
           </p>
           <h2 className={css.titleFuctions}>Rental Conditions:</h2>
-          <p className={css.conditions}>{rentalConditions}</p>
+          <div className={css.importantInfo}>
+            <p>
+              Minimum age:
+              <span className={css.age}>{formattedConditions[2]}</span>
+            </p>
+            <p>{license.join(' ')}</p>
+          </div>
+
+          <div className={css.payInfo}>
+            <p>{deposit.join(' ')}</p>
+            <p>
+              Mileage:
+              <span className={css.mileage}>
+                {(mileage / 1000).toString().replace('.', ',')}
+              </span>
+            </p>
+            <p>
+              Price:<span className={css.price}>{rentalPrice}</span>
+            </p>
+          </div>
+
           <a className={css.rentalLink} href="tel:+380730000000">
             Rental Car
           </a>
@@ -165,3 +201,24 @@ const Modal = ({ showModal, value, items }) => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+  showModal: PropTypes.func.isRequired,
+  item: PropTypes.shape({
+    img: PropTypes.string.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    year: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+    fuelConsumption: PropTypes.string.isRequired,
+    engineSize: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    accessories: PropTypes.arrayOf(PropTypes.string).isRequired,
+    functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
+    rentalConditions: PropTypes.string.isRequired,
+    rentalPrice: PropTypes.string.isRequired,
+    mileage: PropTypes.number.isRequired,
+  }),
+};

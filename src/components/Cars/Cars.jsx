@@ -1,35 +1,13 @@
-import { useSelector } from 'react-redux';
-import { selectItems } from '../../redux/selectors';
+import PropTypes from 'prop-types';
 import CarsItem from '../CarsItem/CarsItem';
 import css from './cars.module.css';
 
-const Cars = ({ showModal, cardID }) => {
-  const items = useSelector(selectItems);
-
+const Cars = ({ items }) => {
   return (
     <>
       <ul className={css.cardList}>
         {items.map(obj => {
-          return (
-            <CarsItem
-              key={obj.id}
-              id={obj.id}
-              img={obj.img}
-              description={obj.description}
-              make={obj.make}
-              model={obj.model}
-              year={obj.year}
-              rentalPrice={obj.rentalPrice}
-              address={obj.address}
-              rentalCompany={obj.rentalCompany}
-              type={obj.type}
-              mileage={obj.mileage}
-              accessories={obj.accessories}
-              functionalities={obj.functionalities}
-              showModal={showModal}
-              cardID={cardID}
-            />
-          );
+          return <CarsItem key={obj.id} objCar={obj} />;
         })}
       </ul>
     </>
@@ -37,3 +15,11 @@ const Cars = ({ showModal, cardID }) => {
 };
 
 export default Cars;
+
+Cars.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};

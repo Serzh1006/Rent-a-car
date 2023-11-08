@@ -62,6 +62,20 @@
   margin-bottom: 14px;
 }
 
+.accessoriesText {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-info-color);
+  margin-bottom: 24px;
+}
+
 .description {
   color: var(--text-primary-color);
   font-size: 14px;
@@ -76,10 +90,6 @@
   margin-bottom: 8px;
   color: var(--text-primary-color);
   line-height: 1.42;
-}
-
-.conditions {
-  margin-bottom: 24px;
 }
 
 .rentalLink {
@@ -106,4 +116,41 @@
   font-weight: 500;
   line-height: 1.5;
   color: var(--text-primary-color);
+}
+
+.importantInfo {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  margin-left: 14px;
+  gap: 36px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.age {
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--btn-color);
+}
+
+.payInfo {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  margin-left: 14px;
+  gap: 36px;
+  font-size: 12px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.mileage {
+  font-weight: 600;
+  color: var(--btn-color);
+}
+.price {
+  font-weight: 600;
+  color: var(--btn-color);
 }

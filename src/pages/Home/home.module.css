@@ -1,0 +1,15 @@
+.titlePrimary {
+  display: block;
+  color: rgb(27, 23, 31);
+}
+
+.wrapTitle {
+  width: 1200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+}
