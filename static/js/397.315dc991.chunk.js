@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[397],{6334:function(e,a,t){t.r(a),t.d(a,{default:function(){return l}});var r=t.p+"static/media/slider-bg.ed80c303b5f433e599f9.png",c="home_wrapTitle__DNl1U",n="home_titlePrimary__J4Lp-",s=t(3329),l=function(){return(0,s.jsxs)("div",{className:c,children:[(0,s.jsx)("img",{src:r,alt:"backgroundImg"}),(0,s.jsx)("h1",{className:n,children:"Company Rental Car"})]})}}}]);
+//# sourceMappingURL=397.315dc991.chunk.js.map

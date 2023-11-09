@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[397],{6334:function(e,t,r){r.r(t),r.d(t,{default:function(){return l}});var a=r.p+"static/media/slider-bg.ed80c303b5f433e599f9.png",c="home_titlePrimary__J4Lp-",s="home_wrapTitle__DNl1U",i=r(3329),l=function(){return(0,i.jsxs)("div",{className:s,children:[(0,i.jsx)("img",{src:a,alt:"backgroundImg"}),(0,i.jsx)("h1",{className:c,children:'Welcome to our site "Rent a Car"'})]})}}}]);
-//# sourceMappingURL=397.a03907ed.chunk.js.map
