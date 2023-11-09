@@ -1,5 +1,11 @@
 .container {
-  max-width: 1215px;
+  width: 1215px;
   margin: 0 auto;
-  padding: 120px 15px 128px 15px;
+  padding: 0 15px 128px 15px;
+}
+
+.loading {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
 }

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import Cars from '../../components/Cars/Cars';
-import CarsList from '../../components/Select/Select';
-import { selectItems, selectCount } from '../../redux/selectors';
+import CarsList from '../../components/CarsList/CarsList';
+import { selectItems, selectCount, visibleItems } from '../../redux/selectors';
 import { fetchCars } from '../../services/fetchCarsAPI';
 import { fetchNextPage } from '../../services/fetchMoreAPI';
 import { getDataLength } from '../../services/getDataLength';
@@ -13,6 +13,7 @@ const Catalog = () => {
 
   const dispatch = useDispatch();
   const items = useSelector(selectItems);
+  const filterItems = useSelector(visibleItems);
   const countData = useSelector(selectCount);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const Catalog = () => {
   return (
     <>
       <CarsList />
-      {items.length !== 0 && <Cars items={items} />}
+      {items.length !== 0 && <Cars items={filterItems} />}
       {items.length !== countData && (
         <button
           className={css.btnLoadMore}
