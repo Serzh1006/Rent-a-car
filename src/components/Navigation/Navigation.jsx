@@ -1,18 +1,26 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 import css from './navigation.module.css';
+
+const StyledLinks = styled(NavLink)`
+  color: rgba(0, 0, 0, 0.664);
+  &.active {
+    color: tomato;
+  }
+`;
 
 const Navigation = () => {
   return (
     <>
-      <Link className={css.linkPage} to="/">
+      <StyledLinks className={css.linkPage} to="/">
         Home
-      </Link>
-      <Link className={css.linkPage} to="/catalog">
+      </StyledLinks>
+      <StyledLinks className={css.linkPage} to="/catalog">
         Catalog
-      </Link>
-      <Link className={css.linkPage} to="/favorite">
+      </StyledLinks>
+      <StyledLinks className={css.linkPage} to="/favorite">
         Favorites
-      </Link>
+      </StyledLinks>
     </>
   );
 };

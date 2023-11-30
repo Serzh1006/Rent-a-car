@@ -38,7 +38,6 @@
 .infoCar,
 .infoCarSecond {
   display: flex;
-  gap: 3px;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -85,4 +84,22 @@
   border: none;
   background-color: transparent;
   border-radius: 50%;
+}
+
+.locationInfo,
+.aboutCar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.locationInfo:not(:last-child)::after,
+.aboutCar:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 16px;
+  margin-right: 6px;
+  background-image: url('../../img/vector.svg');
 }
