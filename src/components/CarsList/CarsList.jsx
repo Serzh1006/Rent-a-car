@@ -61,38 +61,39 @@ const CarsList = () => {
     //   </button>
     // </>
 
-    <>
-      <Select name="carslist" placeholder="Select All">
-        <option value="buick">Buick</option>
-        <option value="volvo">Volvo</option>
-        <option value="hummer">HUMMER</option>
-        <option value="subaru">Subaru</option>
-        <option value="mitsubishi">Mitsubishi</option>
-        <option value="nissan">Nissan</option>
-        <option value="lincoln">Lincoln</option>
-        <option value="gmc">GMC</option>
-        <option value="hyundai">Hyundai</option>
-        <option value="mini">MINI</option>
-        <option value="bentley">Bentley</option>
-        <option value="'mercedes-benz">Mercedes-Benz</option>
-        <option value="aston martin">Aston Martin</option>
-        <option value="lamborghini">Lamborghini</option>
-        <option value="audi">Audi</option>
-        <option value="bmw">BMW</option>
-        <option value="chevrolet">Chevrolet</option>
-        <option value="chrysler">Chrysler</option>
-        <option value="kia">Kia</option>
-        <option value="land rover">Land Rover</option>
-        <option value="pontiac">Pontiac</option>
-      </Select>
-      <button
-        className={css.btnSearch}
-        type="button"
-        onClick={() => getValueFromList()}
-      >
-        Search
-      </button>
-    </>
+    // <>
+    //   <Select name="carslist" placeholder="Select All">
+    //     <option value="buick">Buick</option>
+    //     <option value="volvo">Volvo</option>
+    //     <option value="hummer">HUMMER</option>
+    //     <option value="subaru">Subaru</option>
+    //     <option value="mitsubishi">Mitsubishi</option>
+    //     <option value="nissan">Nissan</option>
+    //     <option value="lincoln">Lincoln</option>
+    //     <option value="gmc">GMC</option>
+    //     <option value="hyundai">Hyundai</option>
+    //     <option value="mini">MINI</option>
+    //     <option value="bentley">Bentley</option>
+    //     <option value="'mercedes-benz">Mercedes-Benz</option>
+    //     <option value="aston martin">Aston Martin</option>
+    //     <option value="lamborghini">Lamborghini</option>
+    //     <option value="audi">Audi</option>
+    //     <option value="bmw">BMW</option>
+    //     <option value="chevrolet">Chevrolet</option>
+    //     <option value="chrysler">Chrysler</option>
+    //     <option value="kia">Kia</option>
+    //     <option value="land rover">Land Rover</option>
+    //     <option value="pontiac">Pontiac</option>
+    //   </Select>
+    //   <button
+    //     className={css.btnSearch}
+    //     type="button"
+    //     onClick={() => getValueFromList()}
+    //   >
+    //     Search
+    //   </button>
+    // </>
+    <h2>Select in progress</h2>
   );
 };
 export default CarsList;
